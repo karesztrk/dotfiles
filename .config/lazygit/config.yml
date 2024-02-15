@@ -1,0 +1,25 @@
+gui:
+  # nu_disco
+  theme:
+    lightTheme: false
+    activeBorderColor:
+      - "#AD7DFF" # Green light
+      - bold
+    inactiveBorderColor:
+      - "#BDB7BD" # Text
+    optionsTextColor:
+      - "#6BB5FF" # Blue
+    selectedLineBgColor:
+      - "#313244" # Surface0
+    selectedRangeBgColor:
+      - "#313244" # Surface0
+    cherryPickedCommitBgColor:
+      - "#52E7E1" # Teal
+    cherryPickedCommitFgColor:
+      - "#6BB5FF" # Blue
+    unstagedChangesColor:
+      - "#FF7878" # Red
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never

@@ -1,0 +1,36 @@
+[colors.bright]
+black = "#4E465B"
+blue = "#6BB5FF"
+cyan = "#C4FFFD"
+green = "#67E591"
+magenta = "#D5BDFF"
+red = "#FFB8B8"
+white = "#F8F7F8"
+yellow = "#FFF373"
+
+[colors.normal]
+black = "#0C001F"
+blue = "#0081C2"
+cyan = "#52E7E1"
+green = "#06B741"
+magenta = "#AD7DFF"
+red = "#FF7878"
+white = "#ECE9EC"
+yellow = "#EEDA00"
+
+[colors.primary]
+background = "#0C001F"
+foreground = "#ECE9EC"
+
+[font]
+size = 12
+
+[font.normal]
+family = "0xProto Nerd Font"
+
+[shell]
+program = "/usr/bin/fish"
+
+[window]
+opacity = 0.875
+decorations = "Full"
