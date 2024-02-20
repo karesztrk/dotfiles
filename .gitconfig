@@ -1,0 +1,38 @@
+[init]
+	defaultBranch = master
+[user]
+	email = torok.karoly.krisztian@gmail.com
+	name = Károly Török
+[alias]
+	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
+	new = lg master..HEAD
+	missing = lg HEAD..master
+[core]
+  pager = delta
+	editor = nvim
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true
+[merge]
+    conflictstyle = diff3
+[diff]
+  colorMoved = default
+	algorithm = histogram
+	submodule = log
+[rebase]
+	autostash = true
+	autosquash = true
+[credential "https://gitlab.com"]
+	helper = 
+	helper = !/usr/bin/glab auth git-credential
+[push]
+	default = current
+[rerere]
+	enable = true
+[status]
+	submoduleSummary = true
+[submodule]
+	recurse = true
+[branch]
+	sort = -committerdate
