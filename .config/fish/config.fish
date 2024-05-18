@@ -34,6 +34,7 @@ if test -d ~/Applications/depot_tools
     end
 end
 
+fish_vi_cursor
 
 ## Starship prompt
 if status --is-interactive
@@ -175,10 +176,8 @@ alias vim='nvim'
 set -gx VISUAL nvim
 set -gx EDITOR nvim
 
-alias c='zellij --layout compreg --session compreg'
-alias ca='zellij attach compreg'
-alias p='zellij --layout portfolio --session portfolio'
-alias pa='zellij attach portfolio'
+alias c='zellij --layout base --session chemaxon'
+alias ca='zellij attach chemaxon'
 
 ## Load Node
 if status --is-interactive
@@ -189,3 +188,7 @@ end
 if status --is-interactive
     source (zoxide init fish | psub)
 end
+
+## Compreg on AWS
+set -gx aws_account_id CompregDev
+set -gx TF_VAR_aws_account_id CompregDev

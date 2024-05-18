@@ -1,5 +1,5 @@
 layout {
-  cwd "/home/ktorok/Projects/CompReg/Git/RegistryCxn_webapp"
+  cwd "~"
 
   pane_template name="npm" {
     command "npm"
@@ -43,6 +43,7 @@ layout {
   tab name="Dev" focus=true {
     pane borderless=true
   }
+
   tab name="Test" {
     pane split_direction="vertical" {
       pane 
@@ -51,7 +52,8 @@ layout {
       }
     }
   }
-  tab name="Remote" {
+
+  tab name="Other" {
     pane borderless=true
   }
 }

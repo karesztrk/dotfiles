@@ -1,3 +1,7 @@
+[bell]
+animation = "EaseOutExpo"
+duration = 150
+
 [colors.bright]
 black = "#4E465B"
 blue = "#6BB5FF"
@@ -28,6 +32,13 @@ size = 12
 [font.normal]
 family = "0xProto Nerd Font"
 
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
 [shell]
 program = "/usr/bin/fish"
 
@@ -40,3 +51,6 @@ bindings = [
 { key = "C", mods = "Control|Shift", action = "Copy" },
 { key = "V", mods = "Control", action = "Paste" },
 ]
+
+[selection]
+save_to_clipboard = false

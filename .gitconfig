@@ -15,13 +15,13 @@
 [delta]
     navigate = true
 [merge]
-    conflictstyle = diff3
+	conflictstyle = zdiff3
 [diff]
   colorMoved = default
 	algorithm = histogram
 	submodule = log
 [rebase]
-	autostash = true
+	autoStash = true
 	autosquash = true
 [credential "https://gitlab.com"]
 	helper = 
@@ -36,3 +36,5 @@
 	recurse = true
 [branch]
 	sort = -committerdate
+[pull]
+	rebase = true
