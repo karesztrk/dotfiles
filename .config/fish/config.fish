@@ -192,3 +192,10 @@ end
 ## Compreg on AWS
 set -gx aws_account_id CompregDev
 set -gx TF_VAR_aws_account_id CompregDev
+
+# pnpm
+set -gx PNPM_HOME "/home/ktorok/.local/share/pnpm"
+if not string match -q -- $PNPM_HOME $PATH
+  set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

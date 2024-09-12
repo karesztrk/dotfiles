@@ -1,5 +1,5 @@
 [init]
-	defaultBranch = master
+  defaultBranch = master
 [user]
 	email = torok.karoly.krisztian@gmail.com
 	name = Károly Török
@@ -37,4 +37,6 @@
 [branch]
 	sort = -committerdate
 [pull]
-	rebase = true
+  rebase = true
+[includeIf "gitdir/i:~/Projects/CompReg/"]
+  path = ~/.gitconfig.work
