@@ -41,19 +41,14 @@ layout {
   }
 
   tab name="Dev" focus=true {
-    pane borderless=true
+    pane
   }
 
-  tab name="Test" {
-    pane split_direction="vertical" {
-      pane 
-      npm {
-        args "run" "test-watch"
-      }
+  tab name="Test" split_direction="vertical" {
+    pane 
+    npm {
+      args "run" "test-watch"
     }
   }
 
-  tab name="Other" {
-    pane borderless=true
-  }
 }

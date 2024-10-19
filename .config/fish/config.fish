@@ -176,8 +176,16 @@ alias vim='nvim'
 set -gx VISUAL nvim
 set -gx EDITOR nvim
 
-alias c='zellij --layout base --session chemaxon'
-alias ca='zellij attach chemaxon'
+function start_zellij
+    zellij attach chemaxon
+    if test $status -eq 0
+    else
+        zellij --layout base --session chemaxon
+        zellij attach chemaxon
+    end
+end
+
+alias c start_zellij
 
 ## Load Node
 if status --is-interactive
@@ -196,6 +204,6 @@ set -gx TF_VAR_aws_account_id CompregDev
 # pnpm
 set -gx PNPM_HOME "/home/ktorok/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
