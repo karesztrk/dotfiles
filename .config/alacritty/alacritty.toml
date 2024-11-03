@@ -39,7 +39,7 @@ hide_when_typing = true
 action = "PasteSelection"
 mouse = "Middle"
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/fish"
 
 [window]
@@ -54,3 +54,5 @@ bindings = [
 
 [selection]
 save_to_clipboard = false
+
+[terminal]

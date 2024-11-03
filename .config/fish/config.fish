@@ -41,6 +41,12 @@ if status --is-interactive
     source ("/usr/bin/starship" init fish --print-full-init | psub)
 end
 
+## Carapace autocompletion
+set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
+mkdir -p ~/.config/fish/completions
+carapace --list | awk '{print $1}' | xargs -I{} touch ~/.config/fish/completions/{}.fish # disable auto-loaded completions (#185)
+carapace _carapace | source
+
 
 ## Advanced command-not-found hook
 source /usr/share/doc/find-the-command/ftc.fish
