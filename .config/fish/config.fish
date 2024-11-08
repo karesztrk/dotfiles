@@ -186,7 +186,7 @@ function start_zellij
     zellij attach chemaxon
     if test $status -eq 0
     else
-        zellij --layout base --session chemaxon
+        zellij --new-session-with-layout base --session chemaxon
         zellij attach chemaxon
     end
 end
