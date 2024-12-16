@@ -3,7 +3,7 @@ gui:
   theme:
     lightTheme: false
     activeBorderColor:
-      - "#AD7DFF" # Green light
+      - "#52E7E1"
       - bold
     inactiveBorderColor:
       - "#BDB7BD" # Text
