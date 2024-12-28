@@ -1,0 +1,17 @@
+background-opacity = 0.875
+theme = nu_disco
+
+shell-integration = fish
+
+font-family = "0xProto Nerd Font"
+font-size = 12
+
+cursor-style = block
+shell-integration-features = no-cursor
+cursor-style-blink = false
+mouse-hide-while-typing = true
+
+window-decoration = false
+
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard

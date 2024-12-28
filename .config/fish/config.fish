@@ -213,3 +213,7 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# android
+set -gx ANDROID_HOME "$HOME/Android/Sdk"
+set -gx NDK_HOME "$ANDROID_HOME/ndk/28.0.12674087"
