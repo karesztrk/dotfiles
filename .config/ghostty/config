@@ -7,6 +7,8 @@ font-family = "0xProto Nerd Font"
 font-size = 12
 
 cursor-style = block
+selection-invert-fg-bg = true
+cursor-invert-fg-bg = true
 shell-integration-features = no-cursor
 cursor-style-blink = false
 mouse-hide-while-typing = true
@@ -15,3 +17,8 @@ window-decoration = false
 
 keybind = ctrl+shift+c=copy_to_clipboard
 keybind = ctrl+shift+v=paste_from_clipboard
+keybind = alt+n=new_split:right
+keybind = alt+l=goto_split:right
+keybind = alt+h=goto_split:left
+keybind = alt+-=resize_split:right,25
+keybind = alt+.=resize_split:left,25
