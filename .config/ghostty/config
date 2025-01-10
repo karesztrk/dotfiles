@@ -5,6 +5,9 @@ shell-integration = fish
 
 font-family = "0xProto Nerd Font"
 font-size = 12
+font-synthetic-style = false
+font-feature = -calt
+font-feature = -dlig
 
 cursor-style = block
 selection-invert-fg-bg = true
