@@ -18,10 +18,17 @@ mouse-hide-while-typing = true
 
 window-decoration = false
 
-keybind = ctrl+shift+c=copy_to_clipboard
-keybind = ctrl+shift+v=paste_from_clipboard
+keybind = performable:ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
 keybind = alt+n=new_split:right
+keybind = alt+m=new_split:down
+keybind = alt+j=goto_split:down
+keybind = alt+k=goto_split:up
 keybind = alt+l=goto_split:right
 keybind = alt+h=goto_split:left
 keybind = alt+-=resize_split:right,25
 keybind = alt+.=resize_split:left,25
+
+keybind = alt+u=scroll_page_up
+keybind = alt+d=scroll_page_down
