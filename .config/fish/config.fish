@@ -126,6 +126,7 @@ alias rmpkg="sudo pacman -Rdd"
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
 alias upd='/usr/bin/garuda-update'
+alias updaur='yay -Sua'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
