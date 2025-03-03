@@ -1,5 +1,6 @@
 [init]
-  defaultBranch = master
+  ; my preference
+	defaultBranch = master
 [user]
 	email = torok.karoly.krisztian@gmail.com
 	name = Károly Török
@@ -15,29 +16,55 @@
 [delta]
     navigate = true
 [merge]
+  ; show the base for merge conflict
 	conflictstyle = zdiff3
 [diff]
-  colorMoved = default
+  ; different color for moved lines
+	colorMoved = plain
+  ; cleaner diff if something is moved
 	algorithm = histogram
 	submodule = log
 [rebase]
+  ; I usually rebase and squash
 	autoStash = true
-	autosquash = true
+	autoSquash = true
 	updateRefs = true
 [credential "https://gitlab.com"]
 	helper = 
 	helper = !/usr/bin/glab auth git-credential
 [push]
-	default = current
+	default = simple
+  ; upstream branch name must be the same
+	autoSetupRemote = true
+  ; auto push tags
+	followTags = true
 [rerere]
+  ; Reuse recorded resolutions
 	enable = true
+	enabled = true
+	autoupdate = true
 [status]
 	submoduleSummary = true
 [submodule]
 	recurse = true
 [branch]
-	sort = -committerdate
+  ; sorts the list by the most recent commit date
+  sort = -committerdate 
 [pull]
-  rebase = true
+  ; rebase by default
+	rebase = true
 [includeIf "gitdir/i:~/Projects/CompReg/"]
+  ; work profile
   path = ~/.gitconfig.work
+[color "diff"]
+  ; different color for moved lines
+  newMoved = blue
+	oldMoved = magenta
+[fetch]
+  ; sync when fetched
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+  ; Help correct cli
+	autocorrect = prompt

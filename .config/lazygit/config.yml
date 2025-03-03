@@ -20,7 +20,7 @@ gui:
     unstagedChangesColor:
       - "#FF7878" # Red
   authorColors:
-    "Károly Török": "#E62472" # Pink dark
+    "Károly Török": "#52E7E1" # Pink dark
 
 git:
   paging:
