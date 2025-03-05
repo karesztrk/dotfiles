@@ -21,6 +21,17 @@ gui:
       - "#FF7878" # Red
   authorColors:
     "Károly Török": "#52E7E1" # Pink dark
+  spinner:
+    frames:
+      - "⣾"
+      - "⣽"
+      - "⣻"
+      - "⢿"
+      - "⡿"
+      - "⣟"
+      - "⣯"
+      - "⣷"
+    rate: 75
 
 git:
   paging:
