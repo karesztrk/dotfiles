@@ -33,9 +33,10 @@
 	helper = 
 	helper = !/usr/bin/glab auth git-credential
 [push]
-	default = simple
+  ; Push the current branch
+	default = current
   ; upstream branch name must be the same
-	autoSetupRemote = true
+	autoSetupRemote = false
   ; auto push tags
 	followTags = true
 [rerere]
