@@ -4,6 +4,12 @@
 [user]
 	email = torok.karoly.krisztian@gmail.com
 	name = Károly Török
+	signingkey = 69834FB07DF7F3DC
+[commit]
+  ; sign every commit
+	gpgsign = true
+[tag]
+	gpgSign = true
 [alias]
 	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
 	new = lg master..HEAD
@@ -54,6 +60,9 @@
 [pull]
   ; rebase by default
 	rebase = true
+[includeIf "gitdir/i:~/Projects/frontend-monorepo/"]
+  ; work profile
+  path = ~/.gitconfig.work
 [includeIf "gitdir/i:~/Projects/CompReg/"]
   ; work profile
   path = ~/.gitconfig.work
