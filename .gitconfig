@@ -4,7 +4,7 @@
 [user]
 	email = torok.karoly.krisztian@gmail.com
 	name = Károly Török
-	signingkey = 69834FB07DF7F3DC
+	signingkey = 58028BA359F04E71
 [commit]
   ; sign every commit
 	gpgsign = true
@@ -63,7 +63,7 @@
 [includeIf "gitdir/i:~/Projects/frontend-monorepo/"]
   ; work profile
   path = ~/.gitconfig.work
-[includeIf "gitdir/i:~/Projects/CompReg/"]
+[includeIf "gitdir/i:~/Projects/registration/"]
   ; work profile
   path = ~/.gitconfig.work
 [color "diff"]

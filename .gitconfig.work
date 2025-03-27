@@ -1,8 +1,8 @@
 [user]
 	email = ktorok@chemaxon.com
 	name = Károly Török
-	signingkey = 69834FB07DF7F3DC
+;	signingkey = 58028BA359F04E71
 [commit]
-	gpgsign = true
+;	gpgsign = true
 [tag]
-	gpgSign = true
+;	gpgSign = true
