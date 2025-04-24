@@ -4,7 +4,7 @@
 [user]
 	email = torok.karoly.krisztian@gmail.com
 	name = Károly Török
-	signingkey = 58028BA359F04E71
+	signingkey = 58028BA359F04E71 
 [commit]
   ; sign every commit
 	gpgsign = true
@@ -14,6 +14,7 @@
 	lg = log --pretty='%C(red)%h%Creset%C(yellow)%d%Creset %s %C(cyan)(%ar)%Creset'
 	new = lg master..HEAD
 	missing = lg HEAD..master
+  wdiff = diff --word-diff
 [core]
   pager = delta
 	editor = nvim
@@ -78,3 +79,12 @@
 [help]
   ; Help correct cli
 	autocorrect = prompt
+[color.decorate]
+  branch = magenta reverse
+  remoteBranch = green
+  tag = red
+  stash = yellow
+  HEAD = cyan bold
+[grep]
+  lineNumber = true
+  patternType = perl

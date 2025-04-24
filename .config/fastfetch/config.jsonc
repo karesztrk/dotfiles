@@ -32,32 +32,32 @@
     {
       "type": "uptime",
       "key": "   Uptime   ",
-      "keyColor": "green",
+      "keyColor": "cyan",
     },
     {
       "type": "shell",
       "key": "   Shell    ",
-      "keyColor": "green",
+      "keyColor": "cyan",
     },
     {
       "type": "terminal",
       "key": "   Terminal ",
-      "keyColor": "green",
+      "keyColor": "cyan",
     },
     {
       "type": "terminalfont",
       "key": "   Font     ",
-      "keyColor": "green",
+      "keyColor": "cyan",
     },
     {
       "type": "packages",
       "key": "   Packages ",
-      "keyColor": "green",
+      "keyColor": "cyan",
     },
     {
       "type": "localip",
       "key": "   Local IP ",
-      "keyColor": "green",
+      "keyColor": "cyan",
     },
     {
       "type": "custom",

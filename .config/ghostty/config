@@ -29,6 +29,9 @@ keybind = alt+l=goto_split:right
 keybind = alt+h=goto_split:left
 keybind = alt+-=resize_split:right,25
 keybind = alt+.=resize_split:left,25
+keybind = ctrl+zero=reset_font_size
+keybind = ctrl+minus=decrease_font_size:1
+keybind = ctrl+.=increase_font_size:1
 
 keybind = alt+u=scroll_page_up
 keybind = alt+d=scroll_page_down
