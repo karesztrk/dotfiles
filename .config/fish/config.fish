@@ -213,3 +213,10 @@ end
 # android
 set -gx ANDROID_HOME "$HOME/Android/Sdk"
 set -gx NDK_HOME "$ANDROID_HOME/ndk/28.0.12674087"
+
+# Add ~/.cargo/bin to PATH
+if test -d ~/.cargo/bin
+    if not contains -- ~/.cargo/bin $PATH
+        set -p PATH ~/.cargo/bin
+    end
+end

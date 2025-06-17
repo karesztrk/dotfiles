@@ -1,0 +1,15 @@
+"$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
+
+[user]
+name = "Károly Török"
+email = "torok.karoly.krisztian@gmail.com"
+
+[[--scope]]
+--when.repositories = ["~/Projects/frontend-monorepo/"]
+[--scope.user]
+email = "ktorok@chemaxon.com"
+
+[signing]
+behavior = "own"
+backend = "gpg"
+key = "58028BA359F04E71"
