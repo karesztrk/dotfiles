@@ -13,3 +13,31 @@ email = "ktorok@chemaxon.com"
 behavior = "own"
 backend = "gpg"
 key = "58028BA359F04E71"
+
+[ui]
+editor = "nvim"
+diff-editor = ["nvim", "-c", "DiffEditor $left $right $output"]
+log-word-wrap = true
+default-command = ["log"]
+
+[git]
+push-new-bookmarks = true
+
+[revset-aliases]
+'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+
+[aliases]
+bm = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
+branches = ["log", "-r", "heads(all())"]
+c = ["commit"]
+e = ["edit"]
+i = ["git", "init", "--colocate"]
+pull = ["git", "fetch"]
+push = ["git", "push", "-c", "@-"]
+r = ["rebase"]
+s = ["squash"]
+
+[template-aliases]
+'format_short_id(id)' = 'id.shortest()'
+'format_timestamp(timestamp)' = 'timestamp.ago()'
+'format_short_signature(signature)' = 'signature.name()'
