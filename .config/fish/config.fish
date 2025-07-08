@@ -161,11 +161,6 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # Find replacement
 alias find="fd"
 
-## Run fastfetch if session is interactive
-if status --is-interactive && type -q fastfetch
-    fastfetch
-end
-
 # Projects
 alias compreg='cd ~/Projects/CompReg/Git/RegistryCxn_webapp/'
 alias compreg_clean='sh ~/Projects/CompReg/clean.sh'
@@ -191,7 +186,7 @@ alias c start_zellij
 
 ## Load Node
 if status --is-interactive
-    nvm use
+    nvm use --silent
 end
 
 ## Init Zoxide for faster navigation
@@ -220,3 +215,17 @@ if test -d ~/.cargo/bin
         set -p PATH ~/.cargo/bin
     end
 end
+
+# Abbreviations
+# JJ Git
+abbr -a jjg jj git
+# JJ bookmark
+abbr -a jjb jj bookmark
+# JJ commit
+abbr -a --set-cursor jjc jj commit -m \"%\"
+# JJ describe
+abbr -a --set-cursor jjd jj describe -m \"%\"
+# JJ new
+abbr -a jjn jj new
+# JJ squash
+abbr -a jjsq jj squash
