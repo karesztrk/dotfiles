@@ -1,5 +1,7 @@
 "$schema" = "https://jj-vcs.github.io/jj/latest/config-schema.json"
 
+trunk_branches = ["master", "main"]
+
 [user]
 name = "Károly Török"
 email = "torok.karoly.krisztian@gmail.com"
@@ -27,17 +29,67 @@ push-new-bookmarks = true
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
 
 [aliases]
-bm = ["bookmark", "move", "--from", "closest_bookmark(@-)", "--to", "@-"]
 branches = ["log", "-r", "heads(all())"]
-c = ["commit"]
-e = ["edit"]
-i = ["git", "init", "--colocate"]
 pull = ["git", "fetch"]
 push = ["git", "push", "-c", "@-"]
-r = ["rebase"]
-s = ["squash"]
 
+
+[colors]
+tag = "red"
+change_id = "cyan"
+"working_copy change_id" = "bright cyan"
+commit_id = "#0CABA6"
+"working_copy commit_id" = "#0CABA6"
+timestamp = "green"
+git_head = "blue"
+bookmarks = { fg = "#FF82B4", reverse = false }
+author = "#6BB5FF"
+"working_copy author" = "#6BB5FF"
+"working_copy empty description placeholder" = "bright yellow"
+"node working_copy" = "bright green"
+trunk_node = "#06B741"
+trunk_bookmark = { underline = true }
+
+[templates]
+# Customized node colors and icons
+log_node = '''
+label("node",
+  coalesce(
+    if(!self, label("elided", "~")),
+    if(current_working_copy, label("working_copy", "◉")),
+    if(conflict, label("conflict", "×")),
+    if(bookmarks.filter(|b| config("trunk_branches").as_string_list().filter(|s| s.contains(b))), label("trunk_node", "◆")),
+    if(immutable, label("immutable", "◆")),
+    label("normal", "○")
+  )
+)
+'''
 [template-aliases]
 'format_short_id(id)' = 'id.shortest()'
-'format_timestamp(timestamp)' = 'timestamp.ago()'
+'format_timestamp(timestamp)' = ''
 'format_short_signature(signature)' = 'signature.name()'
+'render_bookmarks(commit)' = '''
+  commit.bookmarks().map(|b|
+    coalesce(
+      if(config("trunk_branches").as_string_list().filter(|s|
+         s.contains(b.name())), label("trunk_bookmark", b.name())),
+      label("normal", b.name())
+    )
+  )
+'''
+# Customized bookmark color
+'format_short_commit_header(commit)' = '''
+separate(" ",
+  format_short_change_id_with_hidden_and_divergent_info(commit),
+  format_short_signature(commit.author()),
+  format_timestamp(commit_timestamp(commit)),
+  render_bookmarks(commit),
+  commit.tags(),
+  commit.working_copies(),
+  if(commit.git_head(), label("git_head", "git_head()")),
+  format_short_commit_id(commit.commit_id()),
+  if(commit.conflict(), label("conflict", "conflict")),
+  if(config("ui.show-cryptographic-signatures").as_boolean(),
+    format_short_cryptographic_signature(commit.signature())),
+)
+'''
