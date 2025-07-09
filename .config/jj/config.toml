@@ -73,7 +73,7 @@ label("node",
     coalesce(
       if(config("trunk_branches").as_string_list().filter(|s|
          s.contains(b.name())), label("trunk_bookmark", b.name())),
-      label("normal", b.name())
+      label("normal", b)
     )
   )
 '''
