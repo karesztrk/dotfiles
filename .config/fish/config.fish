@@ -194,10 +194,6 @@ if status --is-interactive
     source (zoxide init fish | psub)
 end
 
-## Compreg on AWS
-set -gx aws_account_id CompregDev
-set -gx TF_VAR_aws_account_id CompregDev
-
 # pnpm
 set -gx PNPM_HOME "/home/ktorok/.local/share/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
@@ -221,6 +217,8 @@ end
 abbr -a jjg jj git
 # JJ bookmark
 abbr -a jjb jj bookmark
+## JJ create bookmark
+abbr -a --set-cursor jjbc jj bookmark create % -r @-
 # JJ commit
 abbr -a --set-cursor jjc jj commit -m \"%\"
 # JJ describe
@@ -229,3 +227,7 @@ abbr -a --set-cursor jjd jj describe -m \"%\"
 abbr -a jjn jj new
 # JJ squash
 abbr -a jjsq jj squash
+## JJ push
+abbr -a jjp jj git push -c @-
+## JJ push bookmark
+abbr -a --set-cursor jjbp jj git push -b %

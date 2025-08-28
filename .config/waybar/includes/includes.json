@@ -97,7 +97,15 @@
         "/home/ktorok/.local/share/waybar/modules/pulseaudio.jsonc",
         "/home/ktorok/.local/share/waybar/modules/tray.jsonc",
         "/home/ktorok/.local/share/waybar/modules/wlr-taskbar#windows.jsonc",
-        "/home/ktorok/.local/share/waybar/modules/wlr-taskbar.jsonc"
+        "/home/ktorok/.local/share/waybar/modules/wlr-taskbar.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/custom-mediaplayer.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/gamemode.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/group-eyecare.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/group-hide-tray.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/group-mediaplayer.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/group-volumecontrol.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/mpd.jsonc",
+        "/home/ktorok/.local/share/waybar/modules/temperature.jsonc"
     ],
     "image#wallpaper": {
         "size": 30,

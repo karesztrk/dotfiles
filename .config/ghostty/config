@@ -27,6 +27,7 @@ keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
 keybind = alt+l=goto_split:right
 keybind = alt+h=goto_split:left
+keybind = alt+p=equalize_splits
 keybind = alt+-=resize_split:right,25
 keybind = alt+.=resize_split:left,25
 keybind = ctrl+zero=reset_font_size
@@ -75,5 +76,5 @@ keybind = alt+d=scroll_page_down
 # custom-shader = shaders/water.glsl
 # custom-shader = shaders/cursor_blaze.glsl
 # custom-shader = shaders/cursor_blaze_no_trail.glsl
-# custom-shader = shaders/cursor_smear.glsl
+custom-shader = shaders/cursor_smear.glsl
 # custom-shader = shaders/cursor_smear_fade.glsl

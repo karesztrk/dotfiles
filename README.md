@@ -8,7 +8,6 @@
 - ripgrep
 - fzf
 - delta
-- fastfetch
 - fish
 - starship
 - nvm
