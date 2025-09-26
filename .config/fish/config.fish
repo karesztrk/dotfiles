@@ -102,11 +102,6 @@ end
 ## Useful aliases
 # Replace ls with eza
 alias ls 'lla -l' # preferred listing
-alias lg 'lla -G' # git format
-alias lm 'lla --timeline' # timeline format
-alias le 'lla -t' # tree listing
-alias lt 'lla -T' # table listing
-alias l. 'lla --dotfiles-only' # show only dotfiles
 
 # Replace some more things with better alternatives
 alias cat='bat --style header --style snip --style changes --style header'
