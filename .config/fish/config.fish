@@ -226,3 +226,14 @@ abbr -a jjsq jj squash
 abbr -a jjp jj git push -c @-
 ## JJ push bookmark
 abbr -a --set-cursor jjbp jj git push -b %
+
+# lla jump function - added by lla jump --setup
+function j
+    set dir (lla jump)
+    if test -n "$dir" -a -d "$dir"
+        cd "$dir"
+    end
+end
+
+export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
+alias docker='podman'
