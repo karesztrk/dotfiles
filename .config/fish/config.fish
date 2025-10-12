@@ -226,6 +226,8 @@ abbr -a jjsq jj squash
 abbr -a jjp jj git push -c @-
 ## JJ push bookmark
 abbr -a --set-cursor jjbp jj git push -b %
+## fork point
+abbr -a --set-cursor jjfp jj log -r \"fork_point\(master \| %\)\"
 
 # lla jump function - added by lla jump --setup
 function j

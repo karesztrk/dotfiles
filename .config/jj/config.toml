@@ -34,7 +34,7 @@ branches = ["log", "-r", "heads(all())"]
 pull = ["git", "fetch"]
 push = ["git", "push", "-c", "@-"]
 l = ["log", "-r", "(master..@):: | (master..@)-"]
-
+tree = ["log", "-r", "fork_point(visible_heads())::"]
 
 [colors]
 tag = "red"
