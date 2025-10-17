@@ -23,8 +23,7 @@ window-padding-balance = true
 keybind = performable:ctrl+c=copy_to_clipboard
 keybind = ctrl+v=paste_from_clipboard
 
-keybind = alt+n=new_split:right
-keybind = alt+m=new_split:down
+keybind = alt+n=new_split:auto
 keybind = alt+j=goto_split:down
 keybind = alt+k=goto_split:up
 keybind = alt+l=goto_split:right
@@ -78,5 +77,5 @@ keybind = alt+d=scroll_page_down
 # custom-shader = shaders/water.glsl
 # custom-shader = shaders/cursor_blaze.glsl
 # custom-shader = shaders/cursor_blaze_no_trail.glsl
-custom-shader = shaders/cursor_smear.glsl
+# custom-shader = shaders/cursor_smear.glsl
 # custom-shader = shaders/cursor_smear_fade.glsl
