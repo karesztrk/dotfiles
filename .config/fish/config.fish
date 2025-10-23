@@ -100,7 +100,6 @@ function copy
 end
 
 ## Useful aliases
-# Replace ls with eza
 alias ls 'lla -l' # preferred listing
 
 # Replace some more things with better alternatives
@@ -167,17 +166,6 @@ alias vim='nvim'
 
 set -gx VISUAL nvim
 set -gx EDITOR nvim
-
-function start_zellij
-    zellij attach chemaxon
-    if test $status -eq 0
-    else
-        zellij --new-session-with-layout base --session chemaxon
-        zellij attach chemaxon
-    end
-end
-
-alias c start_zellij
 
 ## Load Node
 if status --is-interactive

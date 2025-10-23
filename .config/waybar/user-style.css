@@ -1,84 +1,68 @@
 /* User custom styles */
 
 * {
+  border-radius: 0;
   font-family: "0xProto Nerd Font";
   font-size: 16px;
 }
 
-/* Aura theme */
-/* https://github.com/daltonmenezes/aura-theme/tree/main/packages/waybar */
-window#waybar {
-	color: #edecee;
-	background: #000;
+
+#cpu.elevated {
+  /* orange */
+	color: #FFB271;
 }
 
-#custom-arrow-left-fg,
-#custom-arrow-right-fg {
-	color: #15141b;
-}
-#custom-arrow-left-bg,
-#custom-arrow-right-bg {
-	color: #000;
-	background: #15141b;
+#cpu.warning {
+  /* pink */
+	color: #FF82B4;
 }
 
-#backlight,
-#battery,
-#clock,
-#memory,
-#mode,
-#network,
-#pulseaudio,
-#tray,
-#workspaces {
-	background: #15141b;
-	padding: 0 0.5em;
+#cpu.critical {
+  /* red */
+	color: #FF7878;
 }
 
-#mode {
-	color: #15141b;
-	background: #61ffca;
+#battery.warning {
+  /* orange */
+	color: #FFB271;
 }
 
-#workspaces  {
-	padding: 0;
+#battery.critical {
+  /* red */
+	color: #FF7878;
 }
+
 #workspaces button {
-	color: #edecee;
-	padding: 0 0.3em;
-}
-#workspaces button.visible {
-	color: #15141b;
-	background: #6d6d6d;
-}
-#workspaces button.focused {
-	color: #15141b;
-	background: #a277ff;
-}
-#workspaces button.urgent {
-	color: #15141b;
-	background: #61ffca;
-}
-#workspaces button:hover {
-	color: #61ffca;
-	background: #15141b;
-	border: 1px solid #61ffca;
-	box-shadow: inherit;
-	text-shadow: inherit;
+  color: #4E465B;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
-#backlight {
-	color: #f694ff;
+#workspaces button:hover {
+  /* dark teal */
+  background: #0CABA6;
 }
-#battery {
-	color: #82e2ff;
+
+#workspaces button.active {
+  /* teal */
+  color: #52E7E1;
+  background: none;
+  padding-left: 4px;
+  padding-right: 4px;
 }
-#memory {
-	color: #ff6767;
+
+#workspaces button.active:hover {
+  /* teal */
+  background: #52E7E1;
+  color: black;
 }
-#network {
-	color: #61ffca;
+
+#workspaces .workspace-label {
+  /* font-size: 18px; */
 }
-#pulseaudio {
-	color: #ffca85;
+
+#custom-power {
+  /* red */
+  color: #FF7878;
 }
+
