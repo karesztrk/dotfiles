@@ -217,13 +217,5 @@ abbr -a --set-cursor jjbp jj git push -b %
 ## fork point
 abbr -a --set-cursor jjfp jj log -r \"fork_point\(master \| %\)\"
 
-# lla jump function - added by lla jump --setup
-function j
-    set dir (lla jump)
-    if test -n "$dir" -a -d "$dir"
-        cd "$dir"
-    end
-end
-
 export DOCKER_HOST=unix:///run/user/1000/podman/podman.sock
 alias docker='podman'
