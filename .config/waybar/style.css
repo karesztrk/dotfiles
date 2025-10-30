@@ -13,7 +13,7 @@
     /* Modified by Hyde */
 
     /* Modify/add style in ~/.config/waybar/styles/ */
-    @import "/home/ktorok/.local/share/waybar/styles/hyprdots.css";
+    @import "/home/ktorok/.local/share/waybar/styles/defaults.css";
 
     /* Imports wallbash colors */
     @import "/home/ktorok/.cache/hyde/wallbash/gtk.css";
