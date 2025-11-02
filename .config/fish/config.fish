@@ -26,13 +26,6 @@ if test -d ~/.local/bin
     end
 end
 
-# Add depot_tools to PATH
-if test -d ~/Applications/depot_tools
-    if not contains -- ~/Applications/depot_tools $PATH
-        set -p PATH ~/Applications/depot_tools
-    end
-end
-
 fish_vi_key_bindings
 set fish_cursor_insert block
 
@@ -44,9 +37,6 @@ end
 ## Carapace autocompletion
 set -Ux CARAPACE_BRIDGES 'zsh,fish,bash,inshellisense' # optional
 carapace _carapace | source
-
-## Advanced command-not-found hook
-source /usr/share/doc/find-the-command/ftc.fish
 
 ## Functions
 # Functions needed for !! and !$ https://github.com/oh-my-fish/plugin-bang-bang
@@ -157,22 +147,12 @@ alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
 # Find replacement
 alias find="fd"
 
-# Projects
-alias compreg='cd ~/Projects/CompReg/Git/RegistryCxn_webapp/'
-alias compreg_clean='sh ~/Projects/CompReg/clean.sh'
-alias compreg_web_clean='sh ~/Projects/CompReg/clean_web.sh'
-
 # Text editor
 alias vi='nvim'
 alias vim='nvim'
 
 set -gx VISUAL nvim
 set -gx EDITOR nvim
-
-## Load Node
-if status --is-interactive
-    nvm use --silent
-end
 
 ## Init Zoxide for faster navigation
 if status --is-interactive
