@@ -27,7 +27,7 @@
     "orientation": "inherit",
     "modules": [
       "custom/cava",
-      "idle_inhibitor",
+      "custom/hyprsunset",
       "clock"
     ]
   },
@@ -37,14 +37,13 @@
   "group/pill#right": {
     "orientation": "inherit",
     "modules": [
+      "tray",
       "cpu",
       "memory",
+      "privacy",
       "backlight",
       "pulseaudio",
-      "pulseaudio#microphone",
-      "tray",
       "custom/keybindhint",
-      "custom/hyprsunset",
       "custom/hyde-menu",
       "battery",
       "custom/power"
