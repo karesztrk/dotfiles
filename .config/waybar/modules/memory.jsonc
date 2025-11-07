@@ -1,7 +1,19 @@
-/*
-To use updated module, please delete this file. 
-To modify the module, 
-    copy the content from xdg_share/waybar/modules/*.jsonc to ~/.config/waybar/modules/*.jsonc
-See https://man.archlinux.org/man/extra/waybar/waybar-memory.5
-*/
-{}
+{
+  "memory": {
+    "states": {
+      "c": 90,
+      "h": 60,
+      "m": 30
+    },
+    "interval": 30,
+    "format": "\udb83\udf86 <small>{used}GB</small>",
+    "rotate": 0,
+    "format-m": "\udb83\udf85 <small>{used}GB</small>",
+    "format-h": "\udb81\udcc5 <small>{used}GB</small>",
+    "format-c": "\uf421 <small>{used}GB</small>",
+    "format-alt": "\udb83\udf86 {percentage}%",
+    "max-length": 10,
+    "tooltip": true,
+    "tooltip-format": "\udb83\udf86 Memory usage: {percentage}%\n\ue266 Used: {used:0.2f}GB / {total:0.2f}GB\n\uf85a Available: {avail:0.2f}GB\n\uf233 Swap used: {swapUsed:0.2f}GB / {swapTotal:0.2f}GB ({swapPercentage}%)"
+  }
+}

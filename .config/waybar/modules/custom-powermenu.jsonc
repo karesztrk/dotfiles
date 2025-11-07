@@ -1,0 +1,22 @@
+{
+  "custom/powermenu": {
+    "format": "",
+    "rotate": 0,
+    "tooltip": true,
+    "tooltip-format": "󰩈 Logout menu",
+    "on-click": "wlogout -l  ~/.config/wlogout/layout_3 -C ~/.config/wlogout/style_3.css -b 6 --protocol layer-shell",
+    "menu": "on-click-right",
+    "menu-file": "~/.config/waybar/menus/power.xml",
+    "menu-actions": {
+      "lock": "swaylock -f -c 000000 &",
+      "logout": "hyprctl dispatch exit 0",
+      "shutdown-now": "shutdown now",
+      "shutdown-wait": "systemctl poweroff",
+      "reboot-now": "systemctl reboot",
+      "reboot-firmware": "systemctl reboot --firmware-setup",
+      "suspend": "systemctl suspend",
+      "hibernate": "systemctl hibernate"
+    },
+    "interval": 86400
+  }
+}

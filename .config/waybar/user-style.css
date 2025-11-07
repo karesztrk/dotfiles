@@ -6,63 +6,74 @@
   font-size: 16px;
 }
 
-
 #cpu.elevated {
-  /* orange */
-	color: #FFB271;
+	color: @orange_light;
 }
 
 #cpu.warning {
-  /* pink */
-	color: #FF82B4;
+	color: @pink_light;
 }
 
 #cpu.critical {
-  /* red */
-	color: #FF7878;
+	color: @red_light;
 }
 
 #battery.warning {
-  /* orange */
-	color: #FFB271;
+	color: @orange_light;
 }
 
 #battery.critical {
-  /* red */
-	color: #FF7878;
+	color: @red_light;
 }
 
 #workspaces button {
-  color: #4E465B;
-  padding-left: 4px;
-  padding-right: 4px;
+  color: @grey_40;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 #workspaces button:hover {
-  /* dark teal */
-  background: #0CABA6;
+  background: @teal_dark;
 }
 
 #workspaces button.active {
-  /* teal */
-  color: #52E7E1;
+  color: @teal_light;
   background: none;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 #workspaces button.active:hover {
-  /* teal */
-  background: #52E7E1;
+  background: @teal_light;
   color: black;
 }
 
 #workspaces .workspace-label {
   /* font-size: 18px; */
+
 }
 
 #custom-power {
-  /* red */
-  color: #FF7878;
+  color: @red_light;
 }
 
+/* ? Full Pill  shape*/
+
+window#waybar.bottom #pill,
+window#waybar.bottom #pill button,
+window#waybar.top #pill,
+window#waybar.top #pill button,
+window#waybar.left #pill,
+window#waybar.left #pill button,
+window#waybar.right #pill,
+window#waybar.right #pill button {
+  border-radius: 10pt 10pt 10pt 10pt;
+  min-width: 25pt;
+}
+
+window#waybar.top #pill,
+window#waybar.bottom #pill,
+window#waybar.left #pill,
+window#waybar.right #pill {
+    margin: 5pt 0 5pt 0;
+}

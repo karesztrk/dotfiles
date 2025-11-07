@@ -1,12 +1,66 @@
-
 /* To enable blur please make sure alpha is greater than 0 */
 @define-color bar-bg rgba(0, 0, 0, 0.1); 
 
-@define-color main-bg #11111b;
-@define-color main-fg #cdd6f4;
+@define-color main-bg @grey_100;
+@define-color main-fg @grey_5;
 
-@define-color wb-act-bg #a6adc8;
-@define-color wb-act-fg #313244;
+@define-color wb-act-bg @grey_100; 
+@define-color wb-act-fg @grey_5; 
 
-@define-color wb-hvr-bg #f5c2e7;
-@define-color wb-hvr-fg #313244;
+@define-color wb-hvr-bg @teal_darker; 
+@define-color wb-hvr-fg @grey_5; 
+
+@define-color grey_100 #0C001F; /* rgba(12, 0, 31, 1) */
+@define-color grey_90 #180D2A; /* rgba(24, 13, 42, 1) */
+@define-color grey_80 #231934; /* rgba(35, 25, 52, 1) */
+@define-color grey_60 #322941; /* rgba(50, 41, 65, 1) */
+@define-color grey_40 #4E465B; /* rgba(78, 70, 91, 1) */
+@define-color grey_30 #BDB7BD; /* rgba(189, 183, 189, 1) */
+@define-color grey_20 #E7E4E7; /* rgba(231, 228, 231, 1) */
+@define-color grey_10 #ECE9EC; /* rgba(236, 233, 236, 1) */
+@define-color grey_5 #F8F7F8; /* rgba(248, 247, 248, 1) */
+
+@define-color red_darker #BD0000; /* rgba(189, 0, 0, 1) */
+@define-color red_dark #E62424; /* rgba(230, 36, 36, 1) */
+@define-color red_light #FF7878; /* rgba(255, 120, 120, 1) */
+@define-color red_lighter #FFB8B8; /* rgba(255, 184, 184, 1) */
+
+@define-color orange_darker #D16100; /* rgba(209, 97, 0, 1) */
+@define-color orange_dark #F27C18; /* rgba(242, 124, 24, 1) */
+@define-color orange_light #FFB271; /* rgba(255, 178, 113, 1) */
+@define-color orange_lighter #FFDDC0; /* rgba(255, 221, 192, 1) */
+
+@define-color yellow_darker #D0BF00; /* rgba(208, 191, 0, 1) */
+@define-color yellow_dark #EEDA00; /* rgba(238, 218, 0, 1) */
+@define-color yellow_light #FFF373; /* rgba(255, 243, 115, 1) */
+@define-color yellow_lighter #FFF9BB; /* rgba(255, 249, 187, 1) */
+
+@define-color lime_darker #669900; /* rgba(102, 153, 0, 1) */
+@define-color lime_dark #7EBD00; /* rgba(126, 189, 0, 1) */
+@define-color lime_light #CBF37C; /* rgba(203, 243, 124, 1) */
+@define-color lime_lighter #E8FFBA; /* rgba(232, 255, 186, 1) */
+
+@define-color green_darker #009E35; /* rgba(0, 158, 53, 1) */
+@define-color green_dark #06B741; /* rgba(6, 183, 65, 1) */
+@define-color green_light #67E591; /* rgba(103, 229, 145, 1) */
+@define-color green_lighter #AEECC3; /* rgba(174, 236, 195, 1) */
+
+@define-color teal_darker #00837F; /* rgba(0, 131, 127, 1) */
+@define-color teal_dark #0CABA6; /* rgba(12, 171, 166, 1) */
+@define-color teal_light #52E7E1; /* rgba(82, 231, 225, 1) */
+@define-color teal_lighter #C4FFFD; /* rgba(196, 255, 253, 1) */
+
+@define-color blue_darker #005C8A; /* rgba(0, 92, 138, 1) */
+@define-color blue_dark #0081C2; /* rgba(0, 129, 194, 1) */
+@define-color blue_light #6BB5FF; /* rgba(107, 181, 255, 1) */
+@define-color blue_lighter #C3E7F9; /* rgba(195, 231, 249, 1) */
+
+@define-color purple_darker #280E54; /* rgba(40, 14, 84, 1) */
+@define-color purple_dark #4B1E97; /* rgba(75, 30, 151, 1) */
+@define-color purple_light #AD7DFF; /* rgba(173, 125, 255, 1) */
+@define-color purple_lighter #D5BDFF; /* rgba(213, 189, 255, 1) */
+
+@define-color pink_darker #B6034B; /* rgba(182, 3, 75, 1) */
+@define-color pink_dark #E62472; /* rgba(230, 36, 114, 1) */
+@define-color pink_light #FF82B4; /* rgba(255, 130, 180, 1) */
+@define-color pink_lighter #FFCFE3; /* rgba(255, 207, 227, 1) */
