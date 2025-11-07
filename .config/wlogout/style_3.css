@@ -1,0 +1,63 @@
+* {
+    background-image: none;
+    font-size: 28px;
+}
+
+@import "/home/ktorok/.config/waybar/theme.css";
+
+window {
+    background-color: transparent;
+}
+
+button {
+    color: white;
+    background-color: @main-bg;
+    outline-style: none;
+    border: none;
+    border-width: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20%;
+    box-shadow: none;
+    text-shadow: none;
+    animation: gradient_f 20s ease-in infinite;
+    border-radius: 20px 20px 20px 20px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+}
+
+button:focus {
+    background-color: @wb-hvr-bg;
+    background-size: 30%;
+}
+
+button:hover {
+    background-size: 35%;
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 250ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+#lock {
+    background-image: image(url("/home/ktorok/.config/wlogout/icons/lock_white.png"), url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("/home/ktorok/.config/wlogout/icons/logout_white.png"), url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("/home/ktorok/.config/wlogout/icons/suspend_white.png"), url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#shutdown {
+    background-image: image(url("/home/ktorok/.config/wlogout/icons/shutdown_white.png"), url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#hibernate {
+    background-image: image(url("/home/ktorok/.config/wlogout/icons/hibernate_white.png"), url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#reboot {
+    background-image: image(url("/home/ktorok/.config/wlogout/icons/reboot_white.png"), url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+}
+
