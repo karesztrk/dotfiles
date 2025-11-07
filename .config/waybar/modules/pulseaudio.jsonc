@@ -1,7 +1,27 @@
-/*
-To use updated module, please delete this file. 
-To modify the module, 
-    copy the content from xdg_share/waybar/modules/*.jsonc to ~/.config/waybar/modules/*.jsonc
-https://man.archlinux.org/man/extra/waybar/waybar-pulseaudio.5
-*/
-{}
+{
+  "pulseaudio": {
+    "format": "  <small>{volume}% {icon}</small>",
+    "format-bluetooth": "  <small>{volume}% {icon}</small> ",
+    "format-muted": "",
+    "format-icons": {
+      "alsa_output.pci-0000_00_1f.3.analog-stereo": "",
+      "alsa_output.pci-0000_00_1f.3.analog-stereo-muted": "",
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "phone-muted": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol -t 3",
+    "ignored-sinks": [
+      "Easy Effects Sink"
+    ]
+  }
+}

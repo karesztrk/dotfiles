@@ -13,7 +13,7 @@ See https://man.archlinux.org/man/waybar-cpu.5
       "critical": 75
     },
     "interval": 10,
-    "format": "󰍛 {usage}%",
+    "format": "󰍛 <small>{usage}%</small>",
     "rotate": 0,
     "format-alt": "{icon0}{icon1}{icon2}{icon3}",
     "format-icons": [
