@@ -154,6 +154,11 @@ alias vim='nvim'
 set -gx VISUAL nvim
 set -gx EDITOR nvim
 
+## Load Node
+if status --is-interactive
+    nvm use --silent
+end
+
 ## Init Zoxide for faster navigation
 if status --is-interactive
     source (zoxide init fish | psub)

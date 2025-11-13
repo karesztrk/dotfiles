@@ -1,0 +1,14 @@
+* {
+    font: "0xProto Nerd Font 12";
+
+    // Gray 90
+    background:     #0C001F;
+    // Gray 60
+    background-alt: #322941;
+    // Gray 5
+    foreground:     #F8F7F8; 
+    // Teal light
+    selected:       #52E7E1;
+    active:         #ABE9B3FF;
+    urgent:         #F28FADFF;
+}

@@ -27,6 +27,7 @@ push-new-bookmarks = true
 
 [revset-aliases]
 'closest_bookmark(to)' = 'heads(::to & bookmarks())'
+log-graph-prioritize = 'coalesce(trunk())'
 
 [aliases]
 branches = ["log", "-r", "heads(all())"]
