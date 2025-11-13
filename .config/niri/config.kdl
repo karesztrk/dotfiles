@@ -40,7 +40,7 @@ output "eDP-1" {
 layout {
     gaps 10
 
-    center-focused-column "never"
+    center-focused-column "on-overflow"
 
     preset-column-widths {
         proportion 0.33333
@@ -62,18 +62,27 @@ layout {
     }
 
     struts {
+        right 16
+        left 16
     }
 }
 
-
 spawn-sh-at-startup "waybar -c ~/.config/waybar/layouts/niri.jsonc"
 spawn-sh-at-startup "swaybg -i ~/walls/zsa_haloween.jpg"
-spawn-at-startup "ghostty"
-spawn-at-startup "firefox-developer-edition"
+spawn-sh-at-startup "hypridle -q"
 spawn-at-startup "slack"
+spawn-at-startup "firefox-developer-edition"
 
 workspace "chat" {
   open-on-output "eDP-1"
+}
+
+workspace "web" {
+  open-on-output "DP-1"
+}
+
+workspace "dev" {
+  open-on-output "DP-1"
 }
 
 window-rule {
@@ -89,6 +98,7 @@ window-rule {
 
     open-maximized true
     open-on-output "DP-1"
+    open-on-workspace "web"
 }
 
 window-rule {
@@ -101,6 +111,13 @@ window-rule {
 
     open-maximized true
     open-on-output "DP-1"
+}
+
+window-rule {
+    match is-floating=true
+    shadow {
+        on
+    }
 }
 
 hotkey-overlay {
@@ -134,7 +151,7 @@ binds {
     Mod+B hotkey-overlay-title="Open a Browser: brave" { spawn "brave"; }
     Mod+Return hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
     Mod+Backspace hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
-    Mod+Escape hotkey-overlay-title="Logout menu: wlogout" { spawn-sh "wlogout -b 6 -c 0 -r 0 -m 0 --layout ~/.config/wlogout/layout_sway --css ~/.config/wlogout/style_sway.css --protocol layer-shell"; }
+    Mod+Escape hotkey-overlay-title="Logout menu: wlogout" { spawn-sh "wlogout -l  ~/.config/wlogout/layout_3 -C ~/.config/wlogout/style_3.css -b 6 --protocol layer-shell"; }
 
     // This is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
@@ -156,14 +173,14 @@ binds {
 
     Mod+Q repeat=false { close-window; }
 
-    Mod+Left  { focus-column-left; }
-    Mod+Down  { focus-window-down; }
-    Mod+Up    { focus-window-up; }
-    Mod+Right { focus-column-right; }
-    Mod+H     { focus-column-left; }
-    Mod+J     { focus-window-down; }
-    Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
+    Mod+Left  { focus-column-or-monitor-left; }
+    Mod+Down  { focus-window-or-workspace-down; }
+    Mod+Up    { focus-window-or-workspace-up; }
+    Mod+Right { focus-column-or-monitor-right; }
+    Mod+H     { focus-column-or-monitor-left; }
+    Mod+J     { focus-window-or-workspace-down; }
+    Mod+K     { focus-window-or-workspace-up; }
+    Mod+L     { focus-column-or-monitor-right; }
 
     Mod+Shift+Left  { move-column-left; }
     Mod+Shift+Down  { move-window-down; }
@@ -297,4 +314,9 @@ gestures {
 cursor {
     xcursor-theme "Banana"
     xcursor-size 40
+}
+
+environment {
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    TERMINAL "ghostty"
 }
