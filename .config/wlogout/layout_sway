@@ -7,7 +7,7 @@
 
 {
     "label": "logout",
-    "action" : "mmsg -q",
+    "action" : "loginctl terminate-user $USER",
     "text": "Logout",
     "keybind": "e"
 }
