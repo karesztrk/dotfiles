@@ -120,6 +120,12 @@ window-rule {
     }
 }
 
+window-rule {
+    match app-id="Microsoft Teams.*"
+    open-on-workspace "chat"
+    open-maximized true
+}
+
 hotkey-overlay {
     skip-at-startup
 }
