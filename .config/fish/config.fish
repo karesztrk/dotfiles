@@ -29,6 +29,9 @@ end
 fish_vi_key_bindings
 set fish_cursor_insert block
 
+# Set Starship config location to ~/.config/starship/starship.toml
+set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+
 ## Starship prompt
 if status --is-interactive
     source ("/usr/bin/starship" init fish --print-full-init | psub)
