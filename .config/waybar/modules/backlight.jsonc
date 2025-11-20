@@ -1,7 +1,7 @@
 {
   "backlight": {
     "rotate": 0,
-    "format": "{icon} <small>{percent}%</small>",
+    "format": "{icon} {percent}%",
     "format-icons": [
       "",
       "",
@@ -20,7 +20,7 @@
   "backlight#intel_backlight": {
     "device": "intel_backlight",
     "rotate": 0,
-    "format": "{icon} <small>{percent}%</small>",
+    "format": "{icon} {percent}%",
     "format-icons": [
       "",
       "",

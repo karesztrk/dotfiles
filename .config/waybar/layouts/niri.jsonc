@@ -14,28 +14,34 @@
   "modules-left": [
     "group/pill#left"
   ],
+  "modules-center": [
+    "group/pill#center"
+  ],
+  "modules-right": [
+    "group/pill#activity",
+    "group/pill#right"
+  ],
   "group/pill#left": {
     "orientation": "inherit",
     "modules": [
       "niri/workspaces"
     ]
   },
-  "modules-center": [
-    "group/pill#center"
-  ],
   "group/pill#center": {
     "orientation": "inherit",
     "modules": [
       "clock"
     ]
   },
-  "modules-right": [
-    "group/pill#right"
-  ],
+  "group/pill#activity": {
+    "orientation": "inherit",
+    "modules": [
+      "tray"
+    ]
+  },
   "group/pill#right": {
     "orientation": "inherit",
     "modules": [
-      "tray",
       "cpu",
       "memory",
       "backlight",

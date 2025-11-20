@@ -1,9 +1,8 @@
-/* User custom styles */
 
 * {
   border-radius: 0;
   font-family: "0xProto Nerd Font";
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #cpu.elevated {
@@ -33,7 +32,7 @@
 }
 
 #workspaces button:hover {
-  background: @teal_dark;
+  background: @teal_darke
 }
 
 #workspaces button.active {
@@ -48,16 +47,14 @@
   color: black;
 }
 
-#workspaces .workspace-label {
-  /* font-size: 18px; */
-
+#custom-powermenu {
+  color: @pink_dark;
 }
 
-#custom-power {
-  color: @red_light;
+#cpu, #memory, #backlight , #pulseaudio, #battery, #tray {
+  color: @grey_10;
 }
 
-/* ? Full Pill  shape*/
 
 window#waybar.bottom #pill,
 window#waybar.bottom #pill button,
@@ -67,7 +64,7 @@ window#waybar.left #pill,
 window#waybar.left #pill button,
 window#waybar.right #pill,
 window#waybar.right #pill button {
-  border-radius: 10pt 10pt 10pt 10pt;
+  border-radius: 10pt;
   min-width: 25pt;
 }
 
@@ -75,5 +72,31 @@ window#waybar.top #pill,
 window#waybar.bottom #pill,
 window#waybar.left #pill,
 window#waybar.right #pill {
-    margin: 5pt 0 5pt 0;
+    margin-top: 5pt;
+    margin-bottom: 5pt;
+    margin-left: 0;
+    margin-right: 0;
 }
+
+window#waybar #pill.activity {
+    margin-left: 8pt;
+    margin-right: 8pt;
+}
+
+@keyframes blink {
+    to {
+        color: @grey_5;
+    }
+}
+
+#cpu.warning:not(.normal),
+#cpu.critical:not(.normal),
+#battery.warning:not(.charging),
+#battery.critical:not(.charging) {
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: steps(2);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
