@@ -14,32 +14,28 @@
   "modules-left": [
     "group/pill#left"
   ],
-  "group/pill#left": {
-    "orientation": "inherit",
-    "modules": [
-      "ext/workspaces",
-      "custom/sep",
-      "dwl/window#layout",
-      "custom/sep",
-      "dwl/window#title"
-    ]
-  },
   "modules-center": [
     "group/pill#center"
   ],
+  "modules-right": [
+    "group/pill#activity",
+    "group/pill#right"
+  ],
+  "group/pill#left": {
+    "orientation": "inherit",
+    "modules": [
+      "ext/workspaces"
+    ]
+  },
   "group/pill#center": {
     "orientation": "inherit",
     "modules": [
       "clock"
     ]
   },
-  "modules-right": [
-    "group/pill#right"
-  ],
   "group/pill#right": {
     "orientation": "inherit",
     "modules": [
-      "tray",
       "cpu",
       "memory",
       "backlight",
@@ -53,18 +49,5 @@
     "ignore-hidden": false,
     "on-click": "activate",
     "sort-by-id": true
-  },
-  "dwl/tags": {
-    "num-tags": 9
-  },
-  "dwl/window#layout": {
-    "format": "[{layout}]"
-  },
-  "dwl/window#title": {
-    "format": "{title}"
-  },
-  "custom/sep": {
-    "format": "|",
-    "interval": 0
   }
 }

@@ -48,6 +48,7 @@
     "/home/ktorok/.config/waybar/modules/niri-window.jsonc",
     "/home/ktorok/.config/waybar/modules/custom-powermenu.jsonc",
     "/home/ktorok/.config/waybar/modules/custom-pulseaudio.jsonc",
+    "/home/ktorok/.config/waybar/modules/workspaces.jsonc",
     "/home/ktorok/.local/share/waybar/modules/image#wallpaper.json",
     "/home/ktorok/.local/share/waybar/modules/privacy.json",
     "/home/ktorok/.local/share/waybar/modules/tray.json",

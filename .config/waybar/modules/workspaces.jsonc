@@ -1,0 +1,14 @@
+{
+  "ext/workspaces": {
+    "format": "{icon}",
+    "ignore-hidden": false,
+    "on-click": "activate",
+    "sort-by-id": true,
+    "persistent-workspaces": {
+      "1": [
+        "eDP-1",
+        "DP-1"
+      ]
+    }
+  }
+}
